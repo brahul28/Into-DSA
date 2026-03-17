@@ -24,24 +24,14 @@
 
 
 
-//Using Hash Map
-
+// Using XOR optimal
 
 var singleNumber = function (nums) {
-    let hash = {};
-
+    let xor = 0;
     for (let i = 0; i < nums.length; i++){
-        if (!hash[nums[i]]) {
-            hash[nums[i]] = 1;
-        } else {
-            hash[nums[i]]++;
-        }
+        xor = xor ^ nums[i];
     }
-    for (let i = 0; i < nums.length; i++){
-        if (hash[nums[i]] === 1) {
-            console.log(nums[i]);
-        }
-    }
+    console.log(xor);
     
 };
 let nums = [4, 1, 2, 1, 2];
@@ -49,15 +39,29 @@ singleNumber(nums);
 
 
 
-// Using XOR
+
+//Using Hash Map
+
 
 // var singleNumber = function (nums) {
-//     let xor = 0;
+//     let hash = {};
+
 //     for (let i = 0; i < nums.length; i++){
-//         xor = xor ^ nums[i];
+//         if (!hash[nums[i]]) {
+//             hash[nums[i]] = 1;
+//         } else {
+//             hash[nums[i]]++;
+//         }
 //     }
-//     console.log(xor);
+//     for (let i = 0; i < nums.length; i++){
+//         if (hash[nums[i]] === 1) {
+//             console.log(nums[i]);
+//         }
+//     }
     
 // };
 // let nums = [4, 1, 2, 1, 2];
 // singleNumber(nums);
+
+
+
