@@ -1,7 +1,7 @@
 //Sum of all numbers in an Array
 
 var sum = function(n){
-    if (n == 0) return arr[n];
+    if (n == 0) return arr[0];
 
     return arr[n] + sum(n - 1);
     
