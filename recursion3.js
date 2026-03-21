@@ -7,7 +7,7 @@ let arr = [5, 3, 2, 0, 1];
 
 
 var sum = function (n) {
-    let isOdd = arr[n] % 2;
+    let isOdd = arr[n] % 2 !== 0;
 
     if (n == 0) {
         // if (isOdd) return arr[0];
